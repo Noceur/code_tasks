@@ -1,0 +1,113 @@
+.body {
+    background-color: white;
+}
+
+.center_text{
+    text-align:center
+}
+
+
+/*SECTIONS*/
+
+.one {
+    position: relative;
+    background-image: linear-gradient(to bottom right, #238496, #3150A4);
+    height: 800px;
+    transform: skew(0deg, -10deg) translateY(-300px);
+    z-index: 3;
+}
+
+.one .container{
+    transform: skew(0deg, 10deg);
+    padding-top: 400px;
+}
+
+.two {
+    position: relative;
+    background-image: linear-gradient(to bottom right, #F3BE0F, #D90D4B);
+    height: 900;
+    transform: skew(0deg, 4deg) translateY(-200px);
+    z-index: 2;
+}
+
+.two .container{
+    transform: skew(0deg, -4deg);
+    padding-top: 400px;
+}
+
+.one {
+    position: relative;
+    background-image: linear-gradient(to bottom right, #238496, #3150A4);
+    height: 800px;
+    transform: skew(0deg, -10deg) translateY(-300px);
+    z-index: 3;
+}
+
+.one .container{
+    transform: skew(0deg, 10deg);
+    padding-top: 400px;
+}
+
+.three {
+    position: relative;
+    background-image: linear-gradient(to bottom right, #4B19A6, #1F2FA7);
+    height: 900px;
+    transform: skew(0deg, 11deg) translateY(-350px);
+    z-index: 2;
+}
+
+.three .container{
+    transform: skew(0deg, -11deg);
+    padding-top: 400px;
+}
+
+.four {
+    position: relative;
+    background-image: linear-gradient(to bottom right, grey, darkgrey);
+    height: 400;
+    transform: skew(0deg, 0deg) translateY(50px);
+    z-index: 2;
+}
+
+.four .container{
+    transform: skew(0deg, 0deg);
+    padding-top: 50px;
+}
+
+/*SECTIONS*/
+
+
+
+
+.cont_one_h1{
+    color: #FFFFFF;
+    /*text-shadow: 0px 0px 2px currentColor, 0px 0px 2px currentColor;*/
+}
+
+.cont_one_p{
+    color: #FFFFFF;
+}
+
+.cont_one_h1:after{
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 139px; /* Change this to whatever width you want. */
+    padding-top: 5px; /* This creates some space between the element and the border. */
+}
+
+.logo_index{
+    color: #0D5F6E !important;
+}
+
+.logo_projects{
+    color: #BE9304 !important;
+}
+
+.logo_about{
+    color: #290866 !important;
+}
+
+.logo_contact{
+    color: #DDDDDD !important;
+}

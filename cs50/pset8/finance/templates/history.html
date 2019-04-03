@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    history
+{% endblock %}
+
+{% block main %}
+<center>
+    <table>
+            <th> Symbol &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th> Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th> Shares &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th> Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        {% for item in list_py %}
+            <tr>
+
+            {% for key, value in item.items() %}
+                <td> {{ value }} &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</center>
+{% endblock %}

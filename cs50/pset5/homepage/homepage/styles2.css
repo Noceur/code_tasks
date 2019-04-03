@@ -1,0 +1,50 @@
+.noc-selected {
+  text-shadow: 0px 0px 1px currentColor, 0px 0px 1px currentColor;
+}
+
+/* Source: https://www.steckinsights.com/shorten-length-border-bottom-pure-css/
+.noc-selected:after{
+    content: ""; /* This is necessary for the pseudo element to work.
+    display: block; /* This will put the pseudo element on its own line.
+    margin: 0 auto; /* This will center the border.
+    width: 15%; /* Change this to whatever width you want.
+    padding-top: 2px; /* This creates some space between the element and the border.
+    border-bottom: 2px solid currentColor; /* This creates the border. Replace black with whatever color you want.
+}*/
+
+.navbar .navbar-collapse {
+  text-align: right;
+}
+
+.noc-bar{
+    z-index: 500;
+    /*
+    background-color:rgba(0, 0, 0, 0.4);
+    border-bottom:2px solid rgba(0,0,0, 0.1);
+    padding-bottom:10px;*/
+}
+
+.card-container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.card-img-text {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.nav-bg{
+  transition: 250ms ease-out;
+  background: transparent !important;
+}
+
+.nav-bg.scrolled{
+  background: rgba(0,0,0,0.5)!important;
+}
+
+.nav-bg.scrolled2{
+  background: #0000FF !important;
+}

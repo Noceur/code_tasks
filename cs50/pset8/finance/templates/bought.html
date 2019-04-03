@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block main %}
+    <!-- <p>Price of one stock from '{{name}}' costs: {{price}}</p> -->
+    <center>
+        <table>
+                <th> Symbol &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th> Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th> Shares &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th> Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <tr>
+                    <td> {{ symbol }} &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td> {{ stock['price'] | usd}} &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td> {{ shares }} &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td> {{ total | usd}} &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+        </table>
+        <p><b>Available cash: </b>{{cash | usd}}</p>
+    </center>
+{% endblock %}

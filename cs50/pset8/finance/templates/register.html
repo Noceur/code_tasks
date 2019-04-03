@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+<!--
+onsubmit = "event.preventDefault(); myValidation();">
+onsubmit="event.preventDefault(); check();"
+-->
+{% block main %}
+    <form action="/register" method="post" id="regForm">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control check-user" id="userID" name="username" placeholder="Username" type="text">
+
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password"><br>
+            <input class="form-control" name="confirmation" placeholder="Password confirmation" type="password">
+        </div>
+        <button class="btn btn-primary updateButton" member_id="x">Check availability</button>
+        <button class="btn btn-primary" type="submit" id="submitButton">Register</button>
+    </form>
+
+    <script>
+
+    // var regForm = document.getElementById("regForm");
+
+    $("#regForm").submit(function(e){
+        return false;
+    });
+
+    var buttonSubmit = document.getElementById("submitButton");
+    buttonSubmit.addEventListener('click', function(e){
+        validation();
+    });
+
+
+    function validation(){
+        var buttonSubmit = document.getElementById("submitButton");
+        var inputUser = document.getElementById("userID").value;
+        var regForm = document.getElementById("regForm");
+
+        $.ajax({
+            url : '/check?username='+inputUser,
+            type : 'GET',
+            data: $('form').serialize(),
+            success : function(response){
+                if (response == true){
+                    regForm.submit();
+                }
+                regForm.submit();
+                console.log(response);
+                return false;
+            }
+        });
+    }
+
+    </script>
+{% endblock %}

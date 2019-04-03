@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+<center>
+    <table>
+        {% for item in list_py %}
+            <tr>
+            {% for key, value in item.items() %}
+                <th> {{ key }}: </th>
+                <td> {{ value }} &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</center>
+<br>
+<p><b>Total portfolio value:</b> {{total_portfolio}}&nbsp;&nbsp;&nbsp;&nbsp; <b>Available cash: </b>{{cash}}</p>
+<script>
+</script>
+{% endblock %}
