@@ -1,0 +1,1 @@
+Collection of leetcode challenges, goal is to start with the easy and work my way through them all then onto medium and finally through all hard problems over time.
